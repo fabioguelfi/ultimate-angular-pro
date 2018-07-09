@@ -1,7 +1,7 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'auth-remember',
+  selector: "auth-remember",
   template: `
     <label>
       <input type="checkbox" (change)="onChecked($event.target.checked)">
@@ -10,11 +10,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
   `
 })
 export class AuthRememberComponent {
-
   @Output() checked: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   onChecked(value: boolean) {
     this.checked.emit(value);
   }
-
 }
