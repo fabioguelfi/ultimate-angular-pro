@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { User } from './auth-form/auth-form.interface';
+import { User } from "./auth-form/auth-form.interface";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `
     <div>
       <auth-form 
@@ -26,7 +26,6 @@ import { User } from './auth-form/auth-form.interface';
   `
 })
 export class AppComponent {
-
   rememberMe: boolean = false;
 
   rememberUser(remember: boolean) {
@@ -34,11 +33,10 @@ export class AppComponent {
   }
 
   createUser(user: User) {
-    console.log('Create account', user);
+    console.log("Create account", user);
   }
 
   loginUser(user: User) {
-    console.log('Login', user, this.rememberMe);
+    console.log("Login", user, this.rememberMe);
   }
-
 }
